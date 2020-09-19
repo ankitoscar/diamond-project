@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+
+<!-- ------------------------ BOOTSTRAP STYLESHEET ------------------------- -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- --------------------------- CSS STYLESHEET ---------------------------- -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+
+    <!-- ------------------------ TITLE SECTION MANAGER ------------------------ -->
+    {%if title_given%}
+    <title>{{title_given}}</title>
+    {%else%}
+    <title>
+        Title Missing
+    </title>
+    {%endif%}
+    <!-- ----------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------- -->
+
+
+</head>
+
+<!-- ----------------------- FLASH MESSGAES MANAGER ------------------------ -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{ category }}">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><image src='/static/leaf-2.png' class='scroll-img' ></image></button>
+<button onclick="bottomFunction()" id="myBtn2" title="Go to Bottom"><image src='/static/leaf-2.png' class='scroll-img2' ></image></button>
+
+
+<script>
+   //Get the button:
+mybutton = document.getElementById("myBtn");
+mybutton2 = document.getElementById("myBtn2");
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+
+    mybutton2.style.display = "block";
+    
+    } else {
+    mybutton.style.display = "none";
+    
+    mybutton2.style.display = "none";
+    
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+function bottomFunction() {
+  document.body.scrollTop = 1000000; // For Safari
+  document.documentElement.scrollTop= 1000000; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+
+
+
+
+
+<!-- ----------------------- POP UP NAV MENU MANAGER ----------------------- -->
+<input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+<div class="menu">
+    <label class="menu-toggle" for="menu"><i class="material-icons">home</i></label>
+    <ul>
+        <li>
+            <a href="/home">Home</a>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+        <li>
+            <a href="/explore">Explore</a>
+        </li>
+        <li>
+            <label for="profile" id='inv'>Account</label>
+            <input type="checkbox" id="profile" name="profile" class="menu-checkbox">
+            <div class="menu">
+                <label class="menu-toggle" for="profile"><span><i class="fas fa-align-justify"></i></span></label>
+                <ul>
+                    <li>
+                        
+                        <a href="/security">Change Account-info</a>
+                    </li>
+                </ul>
+            </div>
+        <li>
+            <a href="/contact">Creator</a>
+        </li>
+
+    </ul>
+    <ul>
+        <li>
+            <a href="/signout" id='lo'>Log Out</a>
+        </li>
+    </ul>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+<body>
+
+
+
+
+
+
+
+    {% block content %} {% endblock content %}
+
+<!-- -------------------------- BOOTSTRAP SCRIPTS -------------------------- -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+</body>
+
+</html>

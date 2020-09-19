@@ -1,0 +1,66 @@
+<!-- --------------------------- LAYOUT EXTENDED --------------------------- -->
+{% extends "layout.html" %} {% block content %}
+
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 IMPORTS                                 -->
+<!-- ----------------------------------------------------------------------- -->
+{%from "formhelpers.html" import render_field%}
+{%from "formhelpers.html" import render_pp_field%}
+{%from "formhelpers.html" import render_social_field%}
+{%from "formhelpers.html" import render_radio_field%}
+{%from "formhelpers.html" import render_recap%}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+<!-- ------------------------------- TOPBAR -------------------------------- -->
+<h1 class = 'welcome'>Got new loot?</h1>
+
+<!-- ----------------------------- TOP MESSAGE ----------------------------- -->
+<h1 class = 'signhead'> Change the diamond details below. </h1>
+<div class='college-logo'>
+    <image src='/static/diamond.png'  ></image>
+    </div>
+
+
+<!-- ----------------------- FORM TO UPDATE ACCOUNT ------------------------ -->
+<form action="/security" method="POST" class='form2' enctype='multipart/form-data'>
+
+<!-- ------------------------- encoding type added because this helps in showing us the erros we get for the file field------------------------- -->
+    
+    {{form.csrf_token}}
+    {{ form.hidden_tag() }}
+    
+    {{render_field(form.username,   PLACEHOLDER=form.username.label.text)}}
+    
+    {{render_field(form.email, PLACEHOLDER=form.  email.label.text)}}
+
+    {{render_field(form.carat,   PLACEHOLDER=form.carat.label.text)}}
+
+    {{render_field(form.cut)}}
+
+    {{render_field(form.color,   PLACEHOLDER=('J (worst) to D (best)'))}}
+    
+    {{render_field(form.clarity,   PLACEHOLDER=('PhD/Masters/Bachelors'))}}
+
+
+
+
+    {{render_field(form.length,   PLACEHOLDER=('Length in mm'))}}
+
+    
+    {{render_field(form.width,   PLACEHOLDER=('Width in mm'))}}
+
+    {{render_field(form.depth,   PLACEHOLDER=('Depth in mm'))}}
+
+    
+    {{form.submit (class="text-success p-2  ")}}
+    
+    </form>
+
+
+{% endblock content %}

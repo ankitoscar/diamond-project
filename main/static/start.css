@@ -1,0 +1,111 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Indie Flower';
+}
+
+
+:root {
+  --bg-color:#0B0C10;
+  --primary-color:#66FCF1;
+  --secondary-color: #48A19D;
+}
+.btns {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  
+}
+/* Button */
+.btn {
+  padding: 0.9rem 1.9rem;
+  position: relative;
+  display: block;
+  font-size: 2.1rem;
+  letter-spacing: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  color: var(--primary-color);
+}
+.btn:hover {
+  transition-delay: 1s;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  box-shadow: 0 0 20px var(--primary-color), 0 0 80px var(--primary-color),
+    0 0 160px var(--primary-color), 0 0 320px var(--primary-color);
+}
+.btn span {
+  position: absolute;
+  display: block;
+}
+/* Top border */
+.btn span:nth-child(1) {
+  width: 100%;
+  height: 4px;
+  top: 0;
+  transform: translateX(-115%);
+  background: linear-gradient(90deg, transparent, var(--primary-color));
+}
+.btn:hover span:nth-child(1) {
+  transform: translateX(100%);
+  transition: 1s;
+}
+/* Right border */
+.btn span:nth-child(2) {
+  width: 4px;
+  height: 100%;
+  right: 0;
+  transform: translateY(-130%);
+  background: linear-gradient(180deg, transparent, var(--primary-color));
+}
+.btn:hover span:nth-child(2) {
+  transform: translateY(100%);
+  transition: 1s 0.25s;
+}
+/* Bottom border */
+.btn span:nth-child(3) {
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  transform: translateX(100%);
+  background: linear-gradient(270deg, transparent, var(--primary-color));
+}
+.btn:hover span:nth-child(3) {
+  transform: translateX(-115%);
+  transition: 1s 0.5s;
+}
+/* Left border */
+.btn span:nth-child(4) {
+  width: 4px;
+  height: 100%;
+  left: 0;
+  transform: translateY(100%);
+  background: linear-gradient(360deg, transparent, var(--primary-color));
+}
+.btn:hover span:nth-child(4) {
+  transform: translateY(-130%);
+  transition: 1s 0.75s;
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.4;
+}
+
+
+
+

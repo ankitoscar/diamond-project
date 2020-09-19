@@ -1,0 +1,59 @@
+<!-- ------------------------ LAYOUT BLOCK EXTENDED ------------------------ -->
+{% extends "layout.html" %} {% block content %}
+
+
+
+
+<h1 class = 'welcome'>Ahoy, Pirate {{current_user.fname}}</h1>
+
+<div class='college-logo'>
+    <image src='/static/skull.png'  ></image>
+    </div>
+
+<div class = 'square'>
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class = 'home-page-square-content'>
+        <h2 class='home-page-square-title'> Motive</h2>
+        <p>Recently got hands on a massive loot? Got a pouch full of diamonds from your tour to the dungeon? Do you wanna make a fair trade out of that loot? Wanna know what value your diamonds carry?
+        </p>
+        
+    </div>
+</div>
+
+<div class='college-logo'>
+    <image src='/static/skull1.png'  ></image>
+    </div>
+<div class = 'square'>
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class = 'home-page-square-content'>
+        <h2 class='home-page-square-title'> Whats yours worth?</h2>
+        <p>Do you want to check the quality and real worth of your diamond. Go to the explore tab.</p>
+        <a href = '/explore'> Try It </a>
+    </div>
+</div>
+<div class='college-logo'>
+    <image src='/static/skull2.png'  ></image>
+    </div>
+<div class = 'square'>
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class = 'home-page-square-content'>
+        <h2 class='home-page-square-title'> Changing Details</h2>
+        <p>Got hands on more loot, more diamonds? To make changes to the original values of diamond parameters you entered. Go to the Change details tab.</p>
+        <a href = '/security'> Visit</a>
+    </div>
+</div>
+
+<div class='college-logo'>
+    <image src='/static/skull3.png'  ></image>
+    </div>
+{{xx}}
+{% endblock content %}

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+<!-- --------------------------- CSS STYLESHEET ---------------------------- -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='start.css') }}"> 
+
+    <title>The Foreign Family NITR</title>
+</head>
+
+
+<body>
+
+<!-- -------------------------- VIDEO BACKGROUND --------------------------- -->
+    <video autoplay muted loop id="myVideo">
+        <source src="static/bg.mp4" type="video/mp4">
+    </video>
+    <script>
+        var vid = document.getElementById("myVideo");
+        
+        function getPlaySpeed() { 
+            alert(vid.playbackRate);
+        } 
+        
+        function setPlaySpeed() { 
+            vid.playbackRate = 3;
+        } 
+        </script> 
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+    
+<!-- ---------------------- SIGNIN AND SIGNUP BUTTONS ---------------------- -->
+    <div class='btns'>
+        
+    <a href="/signin" class="btn">
+        <!-- Borders -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Sign In
+    </a>
+    
+    <a href="/signup" class="btn">
+        <!-- Borders -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Sign Up
+    </a>
+    
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+</body>
+</html>

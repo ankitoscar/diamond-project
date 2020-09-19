@@ -1,0 +1,79 @@
+<!-- --------------------------- LAYOUT EXTENDED --------------------------- -->
+{% extends "layout2.html" %} {% block content %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 IMPORTS                                 -->
+<!-- ----------------------------------------------------------------------- -->
+{%from "formhelpers.html" import render_field%}
+{%from "formhelpers.html" import render_radio_field%}
+{%from "formhelpers.html" import render_recap%}
+{%from "formhelpers.html" import render_social_field%}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- ----------------------------- TOP MESSAGE ----------------------------- -->
+<h1 class = 'signhead'> Please Sign Up First, To Get Access To The Website</h1>
+
+
+
+<!-- --------------------------- FORM FOR SIGNUP --------------------------- -->
+<form action="/signup" method="POST" class='form1'>
+    
+    {{form.csrf_token}}
+    {{ form.hidden_tag() }}
+    
+    {{render_field(form.username,   PLACEHOLDER=form.username.label.text)}}
+    
+    {{render_field(form.email, PLACEHOLDER=form.  email.label.text)}}
+
+    {{render_field(form.carat,   PLACEHOLDER=form.carat.label.text)}}
+
+    {{render_field(form.cut)}}
+
+    {{render_field(form.color,   PLACEHOLDER=('J (worst) to D (best)'))}}
+    
+    {{render_field(form.clarity,   PLACEHOLDER=('PhD/Masters/Bachelors'))}}
+
+
+
+
+    {{render_field(form.length,   PLACEHOLDER=('Length in mm'))}}
+
+    
+    {{render_field(form.width,   PLACEHOLDER=('Width in mm'))}}
+
+    {{render_field(form.depth,   PLACEHOLDER=('Depth in mm'))}}
+
+
+    {{render_field(form.password,   PLACEHOLDER=form.password.label.text)}}
+
+    {{render_field(form.confirm_password,   PLACEHOLDER="Re-enter Password")}}
+    
+    
+    
+    {{form.submit (class="text-success p-2  ")}}
+
+    </form>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- --------------------------- BOTTOM MESSAGE ---------------------------- -->
+<h1 class = 'signhead'> Already have an account?</h1>
+
+<!-- ----------------------------- BOTTOM LINK ----------------------------- -->
+<div class = 'link'>
+    <ul>
+    <a href="{{url_for('signin')}}" class="anch" >Sign In</a>
+</ul>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+{% endblock content %}

@@ -1,0 +1,112 @@
+
+<!-- --------------------- MACRO FOR ALL BASIC FIELDS ---------------------- -->
+{% macro render_field(field) %}
+<div >
+    <label for="{{ field.name }}" class="control-label">{{ field.label.text }}</label>
+    <div class>
+        {{ field(class_='form-field', **kwargs)|safe }}
+    
+        <ul class='ulx'>
+            {% for error in field.errors %}
+            <li class='lix' >{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endmacro %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+
+<!-- ---------- MACRO FOR THE TEXTATREA FIELD FOR SOICALS SECTION ---------- -->
+{% macro render_social_field(field) %}
+<div >
+    <label for="{{ field.name }}" class="control-label">{{ field.label.text }}</label>
+    <div class>
+        {{ field(class_='form-field-social', **kwargs)|safe }}
+    
+        <ul class='ulx'>
+            {% for error in field.errors %}
+            <li class='lix' >{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endmacro %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+
+<!-- ----------------- MACRO FOR THE RADIO FIELD (GENDER) ------------------ -->
+{% macro render_radio_field(field) %}
+<div >
+    <label class="control-label">{{ field.label.text }}</label>
+    <div >
+        {% for subfield in field %}
+        <div >
+            <label class="control-label-2">
+                {{ subfield }}
+                {{ subfield.label.text }}
+            </label>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+
+<!-- -------------------- MACRO FOR THE RECAPTCHA FIELD -------------------- -->
+{% macro render_recap(field) %}
+<div >
+    <label for="{{ field.name }}" class="control-label">{{ field.label.text }}</label>
+    <div>
+        {{ field(class_='form-field', **kwargs)|safe }}
+    
+        <ul class="ulx">
+            {% for error in field.errors %}
+            <li class="lix">{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endmacro %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- --- MACRO FOR THE COUNTRY SELECTS FIELD (JUST TO NOT SHOW ERRORS ) ---- -->
+{% macro render_country_field(field) %}
+<div >
+    <label for="{{ field.name }}" class="control-label">{{ field.label.text }}</label>
+    <div class>
+        {{ field(class_='form-field', **kwargs)|safe }}
+    
+        
+    </div>
+</div>
+{% endmacro %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+{% macro render_pp_field(field) %}
+<div >
+    <label for="{{ field.name }}" class="control-label">{{ field.label.text }}</label>
+    <div class>
+        {{ field(class_='form-field-pp', **kwargs)|safe }}
+
+        <ul class="ulx">
+            {% for error in field.errors %}
+            <li class="lix">{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endmacro %}

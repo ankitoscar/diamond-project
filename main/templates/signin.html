@@ -1,0 +1,55 @@
+
+<!-- --------------------------- LAYOUT EXTENDED --------------------------- -->
+{% extends "layout2.html" %} {% block content %}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                 IMPORTS                                 -->
+<!-- ----------------------------------------------------------------------- -->
+{%from "formhelpers.html" import render_field%}
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- ----------------------------- TOP MESSAGE ----------------------------- -->
+<h1 class = 'signhead'> Please Sign In To Continue To The Home Page</h1>
+
+
+<!-- --------------------------- FORM TO SIGNIN ---------------------------- -->
+<form action="/signin" method="POST" class='form1'>
+    {{ form.csrf_token }}
+
+    {{ form.hidden_tag() }}
+
+    {{render_field(form.email, PLACEHOLDER=form.email.label.text)}}
+
+    {{render_field(form.password, PLACEHOLDER=form.password.label.text)}}
+
+    {{form.submit(class="text-success")}}
+
+    {{form.remember}}
+
+    {{form.remember.label(class="lbl")}}
+</form>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- --------------------------- BOTTOM MESSAGE ---------------------------- -->
+<h1 class = 'signhead'> Don't have an account?</h1>
+
+
+<!-- ----------------------------- BOTTOM LINK ----------------------------- -->
+<div class = 'link'>
+    <ul>
+    <a href="{{url_for('signup')}}" class="anch" >Sign Up</a>
+</ul>
+</div>
+
+
+
+{% endblock content %}
