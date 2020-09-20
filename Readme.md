@@ -2,7 +2,7 @@
 
 This project is an end-to-end implementation of a ML model used to predict the prize of a diamond based on its various features.
 
-## Description
+##  Description
 
 Diamond is highly valued in our society. It is seen as a sign of nobility. However, we don't know more about different features of diamond. We only know about carat, but not in depth. Hence let's discuss about the different features of diamond used in our project:
 
