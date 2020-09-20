@@ -28,7 +28,9 @@ Depth  = z/mean(x,y). Table is width of diamond relative to its widest point.
 
 Click [here](https://www.kaggle.com/shivam2503/diamonds/download) to download the dataset and see it first.
 
+### Model Performance
 
+The model has an accuracy of 97% on the test dataset used in the project.
 ### Dependencies
 
 The python version used in this project is 3.8.x.
