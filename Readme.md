@@ -80,7 +80,7 @@ Biplov Pokhrel
 
 GitHub : [@pbplop29](https://github.com/pbplop29)
 
-Email : 
+Email : pbplob@gmail.com
 
 Siddharth Sharma
 
