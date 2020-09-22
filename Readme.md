@@ -59,45 +59,37 @@ Since this website was made for the hackathon ["Aye Aye Hackers"](https://organi
 
 
 1. First page of the website
-![](Screenshot(76).png)
+![](imgs/Screenshot(76).png)
 2. Login Page 
-![](Screenshot(77).png)
+![](imgs/Screenshot(77).png)
 3. Home Page
-![](Screenshot(78).png)
-![](Screenshot(79).png)
+![](imgs/Screenshot(78).png)
+![](imgs/Screenshot(79).png)
 4. Update Info page
-![](Screenshot(84).png)
-![](Screenshot(85).png)
+![](imgs/Screenshot(84).png)
+![](imgs/Screenshot(85).png)
 5. Result page
-![](Screenshot(81).png)
+![](imgs/Screenshot(81).png)
 6. Creators' Info
-![](Screenshot(82).png)
+![](imgs/Screenshot(82).png)
 ## Authors
 
 Contributor names and contact info
 
 Biplov Pokhrel 
-
 GitHub : [@pbplop29](https://github.com/pbplop29)
-
 Email : pbplop@gmail.com
 
 Siddharth Sharma
-
 Github : [@pao0318](https://github.com/pao0318)
-
 Email : sharma.siddharthspacex21@gmail.com
 
 Tanishq Dubey
-
 Github : [@tanishq12442](https://github.com/tanishq12442)
-
 Email : tanishqdubey12442@gmail.com
 
 Ankit Oscar Xalxo 
-
 GitHub : [@ankitoscar](https://github.com/ankitoscar)
-
 Email : ankitoscar911@gmail.com
 
 
